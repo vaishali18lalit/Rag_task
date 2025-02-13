@@ -1,0 +1,113 @@
+/* styles.css */
+
+/* Apply background color and general text styling */
+html, body {
+    background-color: #E3F2FD;  /* Light background color */
+    color: #333;  /* Dark text color */
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;  /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure Streamlit app area is covered */
+.stApp {
+    background-color: #E3F2FD !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style for the title */
+h1 {
+    color: #4CAF50; /* Green color for title */
+    text-align: center;
+}
+
+/* Style for buttons */
+button {
+    background-color: #4CAF50;  /* Green color for buttons */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style for text input fields */
+.text-input {
+    background-color: #444444;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.text-input:focus {
+    border-color: #4CAF50;
+}
+
+/* Streamlit specific component customization */
+.css-1v3fvcr {  /* Target specific Streamlit components */
+    background-color: #2E3B4E !important;
+}
+
+/* Centering the 'Ask Your Query' Section */
+.query-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;  /* Limit the width of the container */
+    box-sizing: border-box;
+}
+
+/* Styling the header */
+.query-header {
+    color: #333;  /* Black color for the header */
+    font-family: 'Roboto', sans-serif;  /* Unique font */
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: none;  /* No capitalization */
+}
+
+/* Styling the input box */
+.query-input {
+    background-color: #fff;  /* White background */
+    border: 2px solid #4CAF50;  /* Permanent green border */
+    color: #333;  /* Dark text for input box */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+/* Remove focus border change */
+.query-input:focus {
+    border-color: #4CAF50;  /* Keep the same green color when focused */
+    outline: none;
+}
+
+/* Styling for the left column */
+.left-column {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);  /* Semi-transparent background */
+    border-radius: 8px;
+    margin-right: 15px;
+    width: 100%;
+}
