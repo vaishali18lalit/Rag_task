@@ -9,7 +9,7 @@ This project implements Retrieval-Augmented Generation (RAG), combining informat
 
 ## Features
 
-Document Retrieval: Uses a vector database for efficient semantic search.
+Document Retrieval : Uses a vector database for efficient semantic search.
 
 Generative Response: Utilizes an LLM to synthesize relevant answers.
 
