@@ -19,29 +19,29 @@ Scalability: Designed to handle large datasets efficiently.
 
 ## Installation
 
-### Prerequisites
+#### Prerequisites
 
 Python 3.8+
 
-### Virtual environment (optional but recommended)
+#### Virtual environment (optional but recommended)
 
-### Setup
+#### Setup
 
-### Clone the repository:
+#### Clone the repository:
 
 git clone <repository_url>
 cd <project_directory>
 
-### Create a virtual environment (optional):
+#### Create a virtual environment (optional):
 
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-### Install dependencies:
+#### Install dependencies:
 
 pip install -r requirements.txt
 
-### Usage
+#### Usage
 
 Start the document retrieval service:
 
