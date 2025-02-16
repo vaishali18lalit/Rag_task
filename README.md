@@ -21,7 +21,7 @@ Scalability: Designed to handle large datasets efficiently.
 
 #### Prerequisites
 
-Python 3.8+
+Python 3.11.5
 
 #### Virtual environment (optional but recommended)
 
@@ -35,7 +35,7 @@ cd <project_directory>
 #### Create a virtual environment (optional):
 
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source ragg/bin/activate  # On Windows use `ragg\Scripts\activate`
 
 #### Install dependencies:
 
@@ -43,14 +43,12 @@ pip install -r requirements.txt
 
 #### Usage
 
-Start the document retrieval service:
+Docker file is present --
 
-python frontend.py
+Docker command to run the application -
+docker run --env-file .env -p 8000:8000 -p 8501:8501 my-app
 
-Run the RAG pipeline:
-
-python main.py --query "Your question here"
-
+Enter your API Keys for Open AI, Langchain and Hugging Face in .env file
 
 ## Architecture
 
