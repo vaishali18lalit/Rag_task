@@ -13,9 +13,6 @@ from langchain_openai import ChatOpenAI
 from langchain.chat_models import ChatOpenAI
 import json 
 
-
-
-
 # Login to Hugging Face
 def login_huggingface():
     huggingface_token = Config.HUGGINGFACE_TOKEN
@@ -54,7 +51,6 @@ def summarize_text_chunk(element):
     summarize_chain = {"element": lambda x: x} | prompt | model | StrOutputParser()
     # Return the result of the summarization
     summaries = summarize_chain.batch(element, {"max_concurrency": 2})
-
     return summaries
 
 def generate_image_summaries(images, prompt_template=None):
@@ -151,7 +147,6 @@ def main():
 
     # Get the API keys from environment variables
     api_keys = get_api_keys()
-
     # Define the PDF file paths
     file_paths = [
         "/Users/vaishalilalit/Desktop/RAG_task/data/2023-conocophillips-aim-presentation_compressed (1).pdf",
@@ -166,22 +161,8 @@ def main():
         "table_chunks": tables_2024,
         "image_chunks": images_2024,
     }
-
     with open('chunks_2024.json', 'w') as f_chunks_2024:
         json.dump(chunks_2024, f_chunks_2024, indent=4)
-
-
-    # # Summarize text
-    # text_summaries_2023 = summarize_text_chunk(texts_2023)
-    # # Summarize tables
-    # # tables_html = [table.metadata.text_as_html for table in tables]
-    # table_summaries_2023 = summarize_text_chunk(tables_2023)
-    # with open("chunks_2024.json", "r") as file:
-    #     data = json.load(file)  # Loads JSON as a Python dictionary
-    
-    # texts_2024 = data["text_chunks"]
-    # tables_2024 = data["table_chunks"]
-    # images_2024 = data["image_chunks"]
 
     # Summarize text
     text_summaries_2024 = summarize_text_chunk(texts_2024)
@@ -190,43 +171,16 @@ def main():
     # # Generate image summaries
     # image_summaries_2023=generate_image_summaries(images_2023)
     image_summaries_2024=generate_image_summaries(images_2024)
-
-    # chunks_2023 = {
-    #     "text_chunks": [text.to_dict() for text in  texts_2023],  # Convert objects to strings
-    #     "table_chunks": tables_2023,
-    #     "image_chunks": images_2023,  # Images are already in base64, so should be fine
-    # }
-
-
-
-    # # Define summaries for 2023 and 2024 in a dictionary format
-    # summaries_2023 = {
-    #     "text_summaries": text_summaries_2023,
-    #     "table_summaries": table_summaries_2023,
-    #     "image_summaries": image_summaries_2023,
-    # }
-
     summaries_2024 = {
         "text_summaries": text_summaries_2024,
         "table_summaries": table_summaries_2024,
         "image_summaries": image_summaries_2024,
     }
 
-    # # Save chunks_2023 to a JSON file
-    # with open('chunks_2023.json', 'w') as f_chunks_2023:
-    #     json.dump(chunks_2023, f_chunks_2023, indent=4)
-
-    # Save chunks_2024 to a JSON file
-    
-
-    # # Save summaries_2023 to a JSON file
-    # with open('summaries_2023.json', 'w') as f_summaries_2023:
-    #     json.dump(summaries_2023, f_summaries_2023, indent=4)
 
     # Save summaries_2024 to a JSON file
     with open('summaries_2024.json', 'w') as f_summaries_2024:
         json.dump(summaries_2024, f_summaries_2024, indent=4)
-
 
 # Directly call the main function
 main()
