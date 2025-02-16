@@ -1,10 +1,10 @@
-RAG Project
+###RAG Project
 
-Overview
+##Overview
 
 This project implements Retrieval-Augmented Generation (RAG), combining information retrieval with generative models to enhance response quality. The system retrieves relevant documents from a knowledge base and uses a large language model to generate informed responses.
 
-Features
+##Features
 
 Document Retrieval: Uses a vector database for efficient semantic search.
 
@@ -14,51 +14,42 @@ Pipeline Integration: Combines retrieval and generation seamlessly.
 
 Scalability: Designed to handle large datasets efficiently.
 
-Installation
+##Installation
 
-Prerequisites
+#Prerequisites
 
 Python 3.8+
 
-Virtual environment (optional but recommended)
+#Virtual environment (optional but recommended)
 
-Setup
+#Setup
 
-Clone the repository:
+#Clone the repository:
 
 git clone <repository_url>
 cd <project_directory>
 
-Create a virtual environment (optional):
+#Create a virtual environment (optional):
 
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-Install dependencies:
+#Install dependencies:
 
 pip install -r requirements.txt
 
-Usage
+#Usage
 
 Start the document retrieval service:
 
-python retrieve.py
+python frontend.py
 
 Run the RAG pipeline:
 
 python main.py --query "Your question here"
 
-Configuration
 
-Modify config.yaml to adjust parameters like:
-
-Model selection
-
-Database connection
-
-Retrieval strategy
-
-Architecture
+##Architecture
 
 Data Ingestion: Load and preprocess documents into a vector database.
 
@@ -66,19 +57,19 @@ Retrieval Module: Searches the vector database for relevant passages.
 
 Generation Module: Uses an LLM to generate a response based on retrieved context.
 
-Dependencies
+##Dependencies
 
 LLM Framework: OpenAI / Hugging Face Transformers
 
-Vector Database: FAISS / ChromaDB / Pinecone
+Vector Database: ChromaDB
 
-Frameworks: LangChain, Flask/FastAPI (if using an API)
+Frameworks: LangChain, FastAPI (if using an API)
 
 API Endpoints (if applicable)
 
 POST /query - Accepts a query and returns a generated response.
 
-Future Enhancements
+##Future Enhancements
 
 Improve retrieval ranking with rerankers
 
