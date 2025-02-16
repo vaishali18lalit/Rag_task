@@ -34,7 +34,7 @@ cd <project_directory>
 
 #### Create a virtual environment (optional):
 
-python -m venv venv
+python -m venv ragg
 source ragg/bin/activate  # On Windows use `ragg\Scripts\activate`
 
 #### Install dependencies:
